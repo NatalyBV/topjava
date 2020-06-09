@@ -1,0 +1,30 @@
+TABLE {
+    width: 300px;
+    /*background: #fffff0;*/
+    border: 1px solid #a52a2a;
+    border-collapse: collapse;
+}
+
+TD, TH {
+    padding: 3px;
+}
+
+TD {
+    text-align: center;
+    border-bottom: 1px solid #a52a2a;
+}
+
+TH {
+    background: rgba(189, 174, 79, 0.79);
+    color: white;
+}
+
+.la {
+    text-align: left;
+}
+.NotExcessValues{
+    background-color: rgba(203, 6, 22, 0.92);
+}
+.ExcessValues{
+    background-color: rgba(18, 80, 4, 0.92);
+}
