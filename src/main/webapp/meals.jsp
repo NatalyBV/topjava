@@ -13,7 +13,7 @@
 <h2>Meals</h2>
 <table>
     <tr>
-        <th>Date</th>
+        <th>Date and Time</th>
         <th>Description</th>
         <th>Calories</th>
         <th colspan=2>Action</th>
@@ -30,6 +30,6 @@
     </c:forEach>
 
 </table>
-<li><a href="MealServlet?action=insert">Add a meal</a></li>
+<a href="MealServlet?action=insert">Add a meal</a>
 </body>
 </html>

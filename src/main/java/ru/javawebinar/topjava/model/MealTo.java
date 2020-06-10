@@ -1,6 +1,7 @@
 package ru.javawebinar.topjava.model;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 public class MealTo {
     private final LocalDateTime dateTime;
@@ -11,14 +12,14 @@ public class MealTo {
 
     private final boolean excess;
 
-    private int id;
+    private final String id;
 
-    public MealTo(LocalDateTime dateTime, String description, int calories, boolean excess, int id) {
+    public MealTo(String id, LocalDateTime dateTime, String description, int calories, boolean excess) {
+        this.id = id;
         this.dateTime = dateTime;
         this.description = description;
         this.calories = calories;
         this.excess = excess;
-        this.id = id;
     }
 
     @Override
@@ -43,15 +44,11 @@ public class MealTo {
         return calories;
     }
 
-    public int getMealId() {
+    public String getMealId() {
         return id;
     }
 
     public boolean isExcess() {
         return excess;
-    }
-
-    public void setId(int index) {
-        this.id = index;
     }
 }

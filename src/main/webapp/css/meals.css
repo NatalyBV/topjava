@@ -1,6 +1,5 @@
 TABLE {
-    width: 300px;
-    /*background: #fffff0;*/
+    width: 900px;
     border: 1px solid #a52a2a;
     border-collapse: collapse;
 }
@@ -15,7 +14,7 @@ TD {
 }
 
 TH {
-    background: rgba(189, 174, 79, 0.79);
+    background: rgba(215, 195, 61, 0.79);
     color: white;
 }
 
@@ -23,8 +22,8 @@ TH {
     text-align: left;
 }
 .NotExcessValues{
-    background-color: rgba(203, 6, 22, 0.92);
+    background-color: rgba(226, 119, 127, 0.92);
 }
 .ExcessValues{
-    background-color: rgba(18, 80, 4, 0.92);
+    background-color: rgba(127, 241, 101, 0.92);
 }
