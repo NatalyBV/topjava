@@ -14,6 +14,7 @@ import ru.javawebinar.topjava.repository.MealRepository;
 import ru.javawebinar.topjava.util.exception.NotFoundException;
 
 import java.util.List;
+import java.util.Set;
 
 import static org.junit.Assert.*;
 import static ru.javawebinar.topjava.MealTestData.MEAL_ID;
@@ -49,22 +50,22 @@ public class MealServiceTest {
 
     @Test
     public void getAnotherCustomer() {
-        assertThrows(NotFoundException.class, () -> service.get(MEAL_ID2, USER_ID));
+        assertThrows(NotFoundException.class, () -> service.get(MEAL_ID, ADMIN_ID));
     }
 
     @Test
     public void delete() {
-        service.delete(MEAL_ID, ADMIN_ID);
-        assertNull(repository.get(MEAL_ID, ADMIN_ID));
+        service.delete(MEAL_ID2, ADMIN_ID);
+        assertNull(repository.get(MEAL_ID2, ADMIN_ID));
     }
 
     @Test
-    public void deletedNotFound() throws Exception {
+    public void deletedNotFound() {
         assertThrows(NotFoundException.class, () -> service.delete(NOT_FOUND, USER_ID));
     }
 
     @Test
-    public void deletedAnotherCustomer() throws Exception {
+    public void deletedAnotherCustomer() {
         assertThrows(NotFoundException.class, () ->
                 service.delete(MEAL_ID2, USER_ID));
     }
@@ -76,7 +77,7 @@ public class MealServiceTest {
     @Test
     public void getAll() {
         List<Meal> all = service.getAll(USER_ID);
-        MealTestData.assertMatch(all, MEAL, MEAL3);
+        MealTestData.assertMatch(all, MEAL3, MEAL);
     }
 
     @Test
